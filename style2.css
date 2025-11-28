@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: black;
+    height: 52px;
+    font-family: "Arial";
+}
+
+nav>div{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>div>ul{
+    display: flex;
+    list-style: none;
+}
+
+nav a{
+    padding: 13px 23px;
+    text-decoration: none;
+}
+
+/* pseudo-selector for an element on cursor hoVer */
+nav ul li a:hover{
+    color: orangered;
+}
+
+nav button{
+    display: none;
+    padding: 5px;
+    background: none;
+    border: 0;
+    color: #fff;
+    margin: 9px;
+}
+
+.hero{
+    height: 50vh;
+    align-content: center;
+    /* border: 1px solid; */
+}
+
+.banner{
+    text-align: center;
+}
+
+.banner h1{
+    font-size: 4rem;
+    line-height: 6rem;
+    background: linear-gradient(to right, blueViolet, orange, skyblue);
+    background-size: 8px 8px;
+    background-repeat: repeat;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px rgba(128, 128, 128, 0.14);
+    /* -webkit-box-reflect: below -15px; */
+}
+
+.card-wrapper{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.cards{
+    width: 18rem;
+    margin: auto;
+    padding: 7px;
+    box-shadow: 2px 2px 8px gainsboro;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+    
+}
+
+/*  */
+/* .cards:hover{ */
+    /* transform: rotate(45deg); */
+/* } */
+
+
+.cards:nth-child(1):hover{
+    transform: rotate(45deg);
+}
+
+
+.cards:nth-child(2):hover{
+    transform: skew(10deg);
+}
+
+
+.cards:nth-child(3):hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.card-body{
+    padding: 9px;
+}
+
+.cards img{
+    border-radius: 9px;
+    filter: grayscale(100%);
+    transition: filter .7s ease-in-out;
+}
+
+.cards img:hover{
+    filter: grayscale(0%);
+}
+
+.d-flex{
+    width: 86%;
+    display: flex;
+    margin: auto;
+    gap: 9px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#bb{
+    border-radius: 15px;
+}
+
+.hint{
+    font-size: 2.4rem;
+    line-height: 4rem;
+}
+
+.lead{
+    font-weight: 400;
+    color: #101010;
+    font-family: cursive;
+}
+
+
+.faqs{
+    width: 33%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+details{
+    width: 100%;
+    margin-bottom: 7px;
+    border-radius: 9px;
+    padding: 8px;
+    box-shadow: 2px 2px 3px gainsboro;
+}
+
+details>p{
+    background-color: gainsboro;
+    padding: 15px 9px;
+    border-radius: 7px;
+}
+
+
+@media only screen and (max-width: 768px){
+    nav>diV>ul{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 75%;
+        background-color: black;
+        height: 100dvh;
+        z-index: 9999;
+
+    }
+
+    nav>diV>ul::before{
+        content: '';
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0,0,0,.6);
+        z-index: -1;
+    }
+
+    nav button{
+        display: block;
+    }
+
+    .d-sm-none{
+        display: none;
+    }
+
+
+    nav ul li a{
+        display: block;
+    }
+
+    .cards{
+        width: 93%;
+    }
+
+
+    .d-flex{
+        flex-direction: column;
+    }
+
+    .faqs{
+        width: 93%;
+    }
+
+ 
+}
